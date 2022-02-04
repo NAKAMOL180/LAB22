@@ -1,4 +1,4 @@
-// Please include header (lab22.h) here.
+#include "lab22.h"
 
 int main(){
 	srand(time(0));
@@ -32,13 +32,13 @@ int main(){
 		if(player_action == 'A') p = hero.attack(mons); 
 		if(monster_action == 'A') m = mons.attack(hero); 
 		
-		if(hero.isDead()){
+		if(hero.isDead()){ //check who win or lose
 			drawScene(player_action,p,monster_action,m);
 			playerLose();
 			break; 
 		}
 		
-		if(mons.isDead()){
+		if(mons.isDead()){ //check who win or lose
 			drawScene(player_action,p,monster_action,m);
 			playerWin();
 			break; 
